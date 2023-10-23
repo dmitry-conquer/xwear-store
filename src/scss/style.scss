@@ -1,0 +1,91 @@
+/* Import lib styles  */
+// @import '../../node_modules/swiper/swiper.scss';
+// @import '../../node_modules/swiper/modules/navigation/navigation.scss';
+// @import '../../node_modules/swiper/modules/autoplay/autoplay.scss';
+// @import '../../node_modules/swiper/modules/pagination/pagination.scss';
+// @import '../../node_modules/swiper/modules/scrollbar/scrollbar.scss';
+// @import '../../node_modules/nouislider/dist/nouislider.min';
+// @import '../../node_modules/aos/src/sass/aos.scss';
+// @import '../../node_modules/choices.js/src/styles/choices.scss';
+
+@import "mixins";
+@import "fonts";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-dewi text-base font-normal;
+  }
+}
+
+@layer components {
+  /*
+    header
+  */
+
+  #burger-inner {
+    &.active-burger {
+      @apply [&>*:nth-child(-n+3)]:translate-x-10;
+    }
+  }
+  #burger-cross {
+    &.active-burger {
+      @apply w-12 translate-x-0  [&>*:nth-child(1)]:rotate-45 [&>*:nth-child(2)]:-rotate-45;
+    }
+  }
+  #header-nav {
+    &.active-menu {
+      @apply left-0;
+    }
+  }
+
+  .has-child {
+    @apply relative;
+    ul {
+      @apply transition-all duration-300;
+      @apply invisible translate-y-[5px] opacity-0;
+    }
+    span {
+      @apply flex items-center gap-3 after:content-[url("../img/simple-arrow.svg")];
+      &::after {
+        @apply transition-transform duration-300;
+      }
+    }
+    &:hover {
+      & > ul {
+        @apply visible translate-y-0 opacity-100;
+      }
+      span::after {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+
+  /*
+    spoilers
+  */
+
+  .active-spoiler {
+    h2 {
+      @apply text-primary;
+    }
+    svg {
+      @apply -rotate-180 fill-primary;
+    }
+  }
+  .active-spoiler-content {
+    .spoiler-content {
+      @apply border-b-primary;
+    }
+  }
+}
+
+
+
+#map {
+  height: 100%;
+  width: 100%;
+}

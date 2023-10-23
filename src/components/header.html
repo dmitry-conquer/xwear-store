@@ -1,0 +1,90 @@
+<header class="relative z-30 bg-dark">
+  <div class="container flex h-16 items-center gap-4 sm:gap-20 md:h-24">
+    <a href="" class="relative z-50 shrink-0 max-sm:w-16">
+      <img src="./img/logo-icon.svg" alt="xwear" />
+    </a>
+    <button id="burger-button" class="group relative z-50 mr-auto block xl:hidden">
+      <div class="relative flex h-[50px] w-[50px] transform items-center justify-center overflow-hidden">
+        <div
+          id="burger-inner"
+          class="flex h-[16px] w-[20px] origin-center transform flex-col justify-between overflow-hidden transition-all duration-300 sm:h-[20px] sm:w-[25px]">
+          <div class="h-[2px] w-7 origin-left transform bg-white transition-all duration-300"></div>
+          <div class="h-[2px] w-7 transform rounded bg-white transition-all delay-75 duration-300"></div>
+          <div class="h-[2px] w-7 origin-left transform bg-white transition-all delay-150 duration-300"></div>
+
+          <div id="burger-cross" class="absolute top-2.5 flex w-0 -translate-x-10 transform items-center justify-between transition-all duration-500">
+            <div class="absolute h-[2px] w-5 rotate-0 transform bg-white transition-all delay-300 duration-500"></div>
+            <div class="absolute h-[2px] w-5 -rotate-0 transform bg-white transition-all delay-300 duration-500"></div>
+          </div>
+        </div>
+      </div>
+    </button>
+    <nav
+      id="header-nav"
+      class="fixed -left-full top-0 z-20 w-full max-w-sm bg-dark transition-all duration-500 max-xl:min-h-screen xl:static xl:max-w-none xl:bg-transparent">
+      <ul class="flex w-full flex-col items-center gap-4 pt-28 xl:flex-row xl:gap-14 xl:pt-0">
+        <li>
+          <a href="#" class="text-base font-semibold text-white transition-colors hover:text-primary xl:text-sm">Одяг</a>
+        </li>
+        <li>
+          <a href="#" class="text-base font-semibold text-white transition-colors hover:text-primary xl:text-sm">Взуття</a>
+        </li>
+        <li>
+          <a href="#" class="text-base font-semibold text-white transition-colors hover:text-primary xl:text-sm">Аксесуари</a>
+        </li>
+        <li>
+          <a href="#" class="text-base font-semibold text-white transition-colors hover:text-primary xl:text-sm">Бренди</a>
+        </li>
+        <li>
+          <a href="#" class="text-base font-semibold text-white transition-colors hover:text-primary xl:text-sm">Розрахувати</a>
+        </li>
+        <li class="has-child">
+          <span class="cursor-pointer text-base font-semibold text-white transition-colors hover:text-primary xl:text-sm">Інформація</span>
+          <ul class="absolute left-0 top-full flex w-64 flex-col gap-5 bg-dark px-4 py-5">
+            <li>
+              <a href="#" class="text-base font-semibold text-white transition-colors hover:text-primary xl:text-sm">Наші контакти</a>
+            </li>
+            <li>
+              <a href="#" class="text-base font-semibold text-white transition-colors hover:text-primary xl:text-sm">Доставка</a>
+            </li>
+            <li>
+              <a href="#" class="text-base font-semibold text-white transition-colors hover:text-primary xl:text-sm">Оплата</a>
+            </li>
+            <li>
+              <a href="#" class="text-base font-semibold text-white transition-colors hover:text-primary xl:text-sm">FAQ</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <div class="relative z-50 flex gap-6">
+      <a href="#" class="shrink-0">
+        <svg class="h-6 w-6 stroke-white transition-colors hover:stroke-primary">
+          <use href="./sprites/sprite.svg#icon-search"></use>
+        </svg>
+      </a>
+      <a href="#" class="shrink-0">
+        <svg class="h-6 w-6 stroke-white transition-colors hover:stroke-primary">
+          <use href="./sprites/sprite.svg#icon-favorites"></use>
+        </svg>
+      </a>
+
+      <a href="#" class="shrink-0">
+        <svg class="h-6 w-6 stroke-white transition-colors hover:stroke-primary">
+          <use href="./sprites/sprite.svg#icon-profile"></use>
+        </svg>
+      </a>
+      <div class="shrink-0">
+        <a href="#" class="relative flex items-center gap-3">
+          <svg class="h-6 w-6 stroke-white transition-colors hover:stroke-primary">
+            <use href="./sprites/sprite.svg#icon-cart"></use>
+          </svg>
+          <div class="hidden font-cera text-sm font-bold text-light-gray sm:block">3 899 ₴</div>
+          <div class="absolute -right-1 -top-1 grid h-4 w-4 place-content-center rounded-full bg-primary sm:static sm:h-6 sm:w-6">
+            <span class="font-cera text-xs font-bold text-white sm:text-sm">7</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
